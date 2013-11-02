@@ -14,6 +14,9 @@
  * @package WordPress
  */
 
+// Quick, to the Batcache!
+define('WP_CACHE', true);
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'wordpress_db');
@@ -82,7 +85,7 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 
@@ -92,3 +95,10 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+// Plugin configuration
+$batcache = [
+  'seconds'=>0,
+  'max_age'=>30*60,  // 30 minutes
+  'debug'=>true
+];
