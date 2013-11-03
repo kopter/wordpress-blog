@@ -5,7 +5,7 @@ api_version: 1
 
 handlers:
 - url: /(.*\.(htm$|html$|css$|js$))
-  static_files: wordpress\/1
+  static_files: wordpress/\1
   upload: wordpress/(.*\.(htm$|html$|css$|js$))
   application_readable: true
 
