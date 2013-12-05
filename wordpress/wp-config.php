@@ -102,3 +102,7 @@ $batcache = [
   'max_age'=>30*60,  // 30 minutes
   'debug'=>true
 ];
+
+/** Overwrite host/siteurl */
+define('WP_HOME', 'https://wordpress-blog-1.appspot.com');
+define('WP_SITEURL', 'https://wordpress-blog-1.appspot.com');
